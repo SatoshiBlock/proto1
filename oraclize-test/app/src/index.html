@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Crop sure Verzekering</title>
+    <link rel="stylesheet" href="semantic.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="semantic.js"></script>
+  </head>
+  <body>
+    <style>
+      .text.container {
+        margin-top: 5em;
+      }
+    </style>
+    <div class="ui fixed inverted menu">
+      <div class="ui container">
+        <a href="#" class="header item">
+          <!-- <img class="logo" src="assets/images/logo.png"> -->
+          Crop sure Verzekering
+        </a>
+        <!-- <a href="#" class="item">Home</a>
+        <div class="ui simple dropdown item">
+          Dropdown <i class="dropdown icon"></i>
+          <div class="menu">
+            <a class="item" href="#">Link Item</a>
+            <a class="item" href="#">Link Item</a>
+            <div class="divider"></div>
+            <div class="header">Header Item</div>
+            <div class="item">
+              <i class="dropdown icon"></i>
+              Sub Menu
+              <div class="menu">
+                <a class="item" href="#">Link Item</a>
+                <a class="item" href="#">Link Item</a>
+              </div>
+            </div>
+            <a class="item" href="#">Link Item</a>
+          </div>
+        </div> -->
+      </div>
+    </div>
+    <div class="ui text container">
+      <div id="paymentFailed" class="ui red message" hidden="true">Betaling mislukt!</div>
+      <div id="paymentSucceeded" class="ui green message" hidden="true">Betaling gelukt!</div>
+
+      <form class="ui form">
+        <div class="field">
+          <div class="two fields">
+            <div class="field">
+              <label>Van</label>
+              <input type="text" id="from" name="eth[from]" placeholder="0x0">
+            </div>
+            <div class="field">
+              <label>Naar</label>
+              <input type="text" id= "to" name="eth[to]" placeholder="0x0">
+            </div>
+          </div>
+        </div>
+        <div class="field">
+          <div class="two fields">
+            <div class="field">
+              <label>Bedrag</label>
+              <input type="text" id="amount" name="eth[amount]" placeholder="0.0">
+            </div>
+            <div class="field">
+              <label>Uitkeren bij</label>
+              <input type="text" id="condition" name="eth[condition]" placeholder="75">
+            </div>
+          </div>
+        </div>
+        <div class="ui teal button" tabindex="0" onclick="app.sendCoin()">Betaal Ethereum</div>
+      </form>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
