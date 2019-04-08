@@ -1,20 +1,29 @@
 # prototype 1 - Smart Contract voor gewassen/akkerbouw insurance met een Oracle intergratie van MeteoVista B.V. developed on Ethereum
 
+    Locatie: http://116.203.139.111:8080/
+
 Drie belangerijke elementen & componenten zijn:
 
     • Truffle
     • SemanticUI + Web3 Library (De front-end)
     • Web3 Library, Ethereum-bridge, Oraclize, WEBAPI, Ganache GUI (De back-end)
+    
+Randvoorwaarden om de PoC op een local machine te runnen, open 3 terminals:
+
+        cd/stage/poc1/oraclize-test
+        cd/stage/poc1/oraclize-test/app
+        cd/stage/poc1/ethereum-bridge/
+ 
   
 # Truffle Framework
-  Het Truffle Framework is de basis, Deze applicatie compiled de contracten van Solidity naar de Bytecode. Dit Framework regelt ook         de migritatie en de testing van de contracts.
+  Het Truffle Framework is de basis, deze applicatie compiled de contracten van Solidity naar de Bytecode. Dit Framework regelt ook         de migritatie en de testing van de contracts naar de onderliggende Blockchain.
         
 # SemanticUI
   De front-end App die met SemanticUI is ontwikkeld (de Webdev server) communiceerd met het on-chain contract op De Blockchain.           Dit loopt via de browser van de eindgebruiker. Dit gebeurd door middel van een tussenpersoon, namelijk de javaScript Library WEB3.
         
   Met Web3 luister je ook naar de events, die je van je Smart Contract terug krijgt.
         
-  Er bestaat namelijk een functie genaamd *executePayment*
+  Er bestaat namelijk een functie genaamd *executePayment* in het Smart Contract
   
     executePayment(address, amount, condition)
     
@@ -31,7 +40,7 @@ Drie belangerijke elementen & componenten zijn:
         // set smart contract address
         OAR = OraclizeAddrResolverI(0x6f485C8BF6fc43eA212E93BBF8ce046C7f1cb475);
         
-  Dit adress wordt gebruikt op de blockchain om writes/calls en reads te maken op de Blockchain omgeving
+  Dit adress wordt gebruikt op de blockchain om writes/reads en contract calls te maken naar de Blockchain omgeving
  
   # De Oraclize Orakel interface
   
