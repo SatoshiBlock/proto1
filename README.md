@@ -61,5 +61,7 @@ Drie belangerijke elementen & componenten zijn:
         PaymentFailed
         
    De conditie kan ook NIET waar zijn als het contract onvoldoende financiele middelen bezit, in de vorm van ETH.
+   
+   Als de conditie NIET waar is, wordt er door het Smart Contract ook geen schade uitgekeerd aan de claim indiener. De premie blijft eigendom van het contract en is niet meer uit te keren.
         
   
