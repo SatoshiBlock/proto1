@@ -50,6 +50,10 @@ Randvoorwaarden om het PoC op een local machine te runnen, open 3 terminals:
   Als er een claim door de eindgebruiker plaatsvind als men op de betaalknop drukt, wordt er een Oracle query geinitieerd door het     Contract en via het on-chain Oracle contract verstuurd via de Ethereum-bridge naar oraclize. Via de Oraclize interface wordt er de volgende query verstuurd naar de MeteoServer B.V. Wep-API:
   
     json(http://weerlive.nl/api/json-data-10min.php?key=23576abdeb&locatie=Amsterdam).liveweer.0.d0neerslag
+    
+  De Oraclize query is te testen volgens onderstaande URL:
+  
+    http://app.oraclize.it/home/test_query#VVJMKEdFVCk=:anNvbihodHRwOi8vd2VlcmxpdmUubmwvYXBpL2pzb24tZGF0YS0xMG1pbi5waHA/a2V5PTIzNTc2YWJkZWImbG9jYXRpZT1BbXN0ZXJkYW0pLmxpdmV3ZWVyLjAuZDBuZWVyc2xhZw==
   
   Als er een antwoord op de request van het Smart Contract komt, stuur het een antwoord op de request terug via een Event.
   Er zijn twee soorten events die er kunnen onstaant: 
