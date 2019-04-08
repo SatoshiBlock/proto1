@@ -6,11 +6,11 @@ Drie belangerijke elementen & componenten zijn:
     • SemanticUI + Web3 Library (De front-end)
     • Web3 Library, Ethereum-bridge, Oraclize, WEBAPI, Ganache GUI (De back-end)
   
-# TRUFFLE
+# Truffle Framework
   Het Truffle Framework is de basis, Deze applicatie compiled de contracten van Solidity naar de Bytecode. Dit Framework regelt ook         de migritatie en de testing van de contracts.
         
 # SemanticUI
-  De front-end App die met SemanticUI is ontwikkeld (de Webdev server) communiceerd met (het on-chain) contract op De Blockchain.           Dit loopt via de browser van de eindgebruiker. Dit gebeurd door middel van een tussenpersoon, namelijk de javaScript Library WEB3.
+  De front-end App die met SemanticUI is ontwikkeld (de Webdev server) communiceerd met het on-chain contract op De Blockchain.           Dit loopt via de browser van de eindgebruiker. Dit gebeurd door middel van een tussenpersoon, namelijk de javaScript Library WEB3.
         
   Met Web3 luister je ook naar de events, die je van je Smart Contract terug krijgt.
         
@@ -28,6 +28,8 @@ Drie belangerijke elementen & componenten zijn:
  
   # De Oraclize Orakel interface
   
-  Als er een claim door de eindgebruiker plaatsvind, dus als men op de betaalknop drukt, wordt er een Oracle query 
+  Als er een claim door de eindgebruiker plaatsvind als men op de betaalknop drukt, wordt er een Oracle query geinitieerd door het Contract en via het on-chain Oracle contract verstuurd via de Ethereum-bridge naar oraclize. Via de Oraclize interface wordt er de volgende query verstuurd naar de MeteoServer B.V. Wep-API:
+  
+    json(http://weerlive.nl/api/json-data-10min.php?key=23576abdeb&locatie=Amsterdam).liveweer.0.d0neerslag
         
   
