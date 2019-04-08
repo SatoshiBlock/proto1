@@ -1,4 +1,4 @@
-# prototype 1 - Smart Contract voor gewassen/akkerbouw insurance met een Oracle intergratie van MeteoVista B.V. developed on Ethereum
+# Prototype 1 - Smart Contract voor gewassen/akkerbouw insurance met een Oracle intergratie van MeteoVista B.V. Developed on Ethereum
 
 # Locatie van de Proof of Concept
     http://116.203.139.111:8080/
