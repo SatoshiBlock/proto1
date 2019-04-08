@@ -28,8 +28,30 @@ Drie belangerijke elementen & componenten zijn:
  
   # De Oraclize Orakel interface
   
-  Als er een claim door de eindgebruiker plaatsvind als men op de betaalknop drukt, wordt er een Oracle query geinitieerd door het Contract en via het on-chain Oracle contract verstuurd via de Ethereum-bridge naar oraclize. Via de Oraclize interface wordt er de volgende query verstuurd naar de MeteoServer B.V. Wep-API:
+  Als er een claim door de eindgebruiker plaatsvind als men op de betaalknop drukt, wordt er een Oracle query geinitieerd door het     Contract en via het on-chain Oracle contract verstuurd via de Ethereum-bridge naar oraclize. Via de Oraclize interface wordt er de volgende query verstuurd naar de MeteoServer B.V. Wep-API:
   
     json(http://weerlive.nl/api/json-data-10min.php?key=23576abdeb&locatie=Amsterdam).liveweer.0.d0neerslag
+  
+  Als er een antwoord op de request van het Smart Contract komt, stuur het een antwoord op de request terug via een Event.
+  Er zijn twee soorten events die er kunnen onstaant: 
+  
+        PaymentSucceeded
+        PaymentFailed
+        
+  De event zorgt ervoor dat SemanticUI een pop-up laat zien op de pagina.
+  
+  Het contract checkt namelijk of de ingevulde conditie in het veld:
+  
+   *uitkeren bij* voldoet aan de hoeveelheid neerslag die het KNMI heeft gemeten in Amsterdam
+   
+   als de conditie waar is dan:
+   
+         PaymentSucceeded
+ 
+   als de conditie *NIET* waar is dan:
+  
+        PaymentFailed
+        
+   De conditie kan ook NIET waar zijn als het contract onvoldoende financiele middelen bezit, in de vorm van ETH.
         
   
