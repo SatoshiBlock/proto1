@@ -7,14 +7,27 @@ Drie belangerijke elementen & componenten zijn:
     • Web3 Library, Ethereum-bridge, Oraclize, WEBAPI, Ganache GUI (De back-end)
   
 # TRUFFLE
-        Het Truffle Framework is de basis, Deze applicatie compiled de contracten van Solidity naar de Bytecode. Dit Framework regelt ook         de migritatie en de testing van de contracts.
+  Het Truffle Framework is de basis, Deze applicatie compiled de contracten van Solidity naar de Bytecode. Dit Framework regelt ook         de migritatie en de testing van de contracts.
         
 # SemanticUI
-        De front-end App die met SemanticUI is ontwikkeld (de Webdev server) communiceerd met (het on-chain) contract op De Blockchain.           Dit loopt via de browser van de eindgebruiker. Dit gebeurd door middel van een tussenpersoon, namelijk de javaScript Library WEB3.
+  De front-end App die met SemanticUI is ontwikkeld (de Webdev server) communiceerd met (het on-chain) contract op De Blockchain.           Dit loopt via de browser van de eindgebruiker. Dit gebeurd door middel van een tussenpersoon, namelijk de javaScript Library WEB3.
         
-        Met Web3 luister je ook naar de events, die je van je Smart Contract terug krijgt.
+  Met Web3 luister je ook naar de events, die je van je Smart Contract terug krijgt.
         
-        Er bestaat namelijk een functie genaamd 
-        
+  Er bestaat namelijk een functie genaamd *executePayment*
+  
+    executePayment(address, amount, condition)
+    
+  deze wordt gecalled vanuit Web3 als je op de betaalknop drukt.
+  
+ # Crop Sure Contract + Ethereum-bridge
+ 
+ als er vervolgens op de betaalknop wordt gedrukt, dan runt het de code vanuit het Smart Contract.
+ Via de Ethereum-bridge, wordt er een real time koppeling gemaakt met het contract on-chain en de Ethereum-bridge on-chain contract. 
+ Dit contract staat in verbinding met de Ethereum-bridge applicatie, die op zijn beurt weer in verbinding staat met Oraclize. 
+ 
+  # De Oraclize Orakel interface
+  
+  Als er een claim door de eindgebruiker plaatsvind, dus als men op de betaalknop drukt, wordt er een Oracle query 
         
   
