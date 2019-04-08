@@ -9,7 +9,7 @@ Drie belangerijke elementen & componenten zijn:
     • SemanticUI + Web3 Library (De front-end)
     • Web3 Library, Ethereum-bridge, Oraclize, WEBAPI, Ganache GUI (De back-end)
     
-Randvoorwaarden om de PoC op een local machine te runnen, open 3 terminals:
+Randvoorwaarden om het PoC op een local machine te runnen, open 3 terminals:
 
         $ cd/stage/poc1/oraclize-test
         $ cd/stage/poc1/oraclize-test/app
