@@ -24,7 +24,14 @@ Drie belangerijke elementen & componenten zijn:
  
  als er vervolgens op de betaalknop wordt gedrukt, dan runt het de code vanuit het Smart Contract.
  Via de Ethereum-bridge, wordt er een real time koppeling gemaakt met het contract on-chain en de Ethereum-bridge on-chain contract. 
- Dit contract staat in verbinding met de Ethereum-bridge applicatie, die op zijn beurt weer in verbinding staat met Oraclize. 
+ Dit contract staat in verbinding met de Ethereum-bridge applicatie, die op zijn beurt weer in verbinding staat met Oraclize.
+ 
+ Het Crop sure Contract staat in verbinding door de OraclizeAdressResolver hard te coden in het contract:
+ 
+        // set smart contract address
+        OAR = OraclizeAddrResolverI(0x6f485C8BF6fc43eA212E93BBF8ce046C7f1cb475);
+        
+  Dit adress wordt gebruikt op de blockchain om writes/calls en reads te maken op de Blockchain omgeving
  
   # De Oraclize Orakel interface
   
