@@ -18,7 +18,7 @@ Drie belangerijke elementen & componenten zijn:
   
     executePayment(address, amount, condition)
     
-  deze wordt gecalled vanuit Web3 als je op de betaalknop drukt.
+  deze wordt opgeroepen vanuit Web3 als je op de betaalknop drukt.
   
  # Crop Sure Contract + Ethereum-bridge
  
@@ -46,10 +46,9 @@ Drie belangerijke elementen & componenten zijn:
         PaymentFailed
         
   De event zorgt ervoor dat SemanticUI een pop-up laat zien op de pagina.
-  
   Het contract checkt namelijk of de ingevulde conditie in het veld:
   
-   *uitkeren bij* voldoet aan de hoeveelheid neerslag die het KNMI heeft gemeten in Amsterdam
+   *uitkeren bij* voldoet aan de hoeveelheid neerslag die het KNMI heeft gemeten in Amsterdam, die
    
    als de conditie waar is dan:
    
