@@ -11,9 +11,11 @@ Drie belangerijke elementen & componenten zijn:
     
 Randvoorwaarden om de PoC op een local machine te runnen, open 3 terminals:
 
-        cd/stage/poc1/oraclize-test
-        cd/stage/poc1/oraclize-test/app
-        cd/stage/poc1/ethereum-bridge/
+        $ cd/stage/poc1/oraclize-test
+        $ cd/stage/poc1/oraclize-test/app
+        $ cd/stage/poc1/ethereum-bridge/
+        en
+        $ node bridge -a 9 -H 127.0.0.1 -p 9545 --dev
  
   
 # Truffle Framework
