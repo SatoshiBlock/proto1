@@ -2,11 +2,11 @@
 
 Drie belangerijke elementen & componenten zijn:
 
-    • Truffle
+# Truffle
     • SemanticUI + Web3 Library (De front-end)
     • Web3 Library, Ethereum-bridge, Oraclize, WEBAPI, Ganache GUI (De back-end)
   
-   ••• TRUFFLE •••
+        ••• TRUFFLE •••
         Het Truffle Framework is de basis, Deze applicatie compiled de contracten van Solidity naar de Bytecode. Dit Framework regelt ook         de migritatie en de testing van de contracts.
         
         ••• SemanticUI •••
