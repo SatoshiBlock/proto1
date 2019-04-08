@@ -53,6 +53,8 @@ Drie belangerijke elementen & componenten zijn:
    als de conditie waar is dan:
    
          PaymentSucceeded
+         
+   Vervolgens keert het Smart Contract de schade uitbetaling direct uit aan de gedupeerde verzekerde.
  
    als de conditie *NIET* waar is dan:
   
