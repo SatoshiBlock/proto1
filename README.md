@@ -62,7 +62,7 @@ Randvoorwaarden om het PoC op een local machine te runnen, open 3 terminals:
         PaymentFailed
         
   De event zorgt ervoor dat SemanticUI een pop-up laat zien op de pagina.
-  Het contract checkt namelijk of de ingevulde conditie in het veld:
+  Het contract checkt namelijk of de ingevulde conditie in het veld voldoet aan de waarde die Meteo Server ontvangt van de KNMI:
   
    *uitkeren bij* voldoet aan de hoeveelheid neerslag die het KNMI heeft gemeten in Amsterdam, die
    
