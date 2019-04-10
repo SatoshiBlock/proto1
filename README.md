@@ -3,11 +3,15 @@
 # Locatie van de Proof of Concept
     http://116.203.139.111:8080/
 
-Drie belangerijke elementen & componenten zijn:
+De zeven belangerijke elementen & componenten zijn:
 
-    • Truffle
+    • Truffle Migrator
     • SemanticUI + Web3 Library (De front-end)
-    • Web3 Library, Ethereum-bridge, Oraclize, WEBAPI, Ganache GUI (De back-end)
+    • Web3 Library, 
+    • Ethereum-bridge, 
+    • Oraclize, 
+    • Web-API (Meteo Server B.V.), 
+    • Truffle TestRPC-Blockchain (De back-end)
     
 Randvoorwaarden om het PoC op een local machine te runnen, open 3 terminals:
 
