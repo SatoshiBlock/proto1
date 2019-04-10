@@ -23,7 +23,7 @@ Randvoorwaarden om het PoC op een local machine te runnen, open 3 terminals:
  
   
 # Truffle Framework
-  Het Truffle Framework is de basis, deze applicatie compiled de contracten van Solidity naar de Bytecode. Dit Framework regelt ook         de migritatie en de testing van de contracts naar de onderliggende Blockchain.
+  Het Truffle Framework is de basis, deze applicatie compiled de contracten van Solidity naar de Bytecode voor de Ethereum Virtual Machine. Dit Framework regelt ook         de migritatie en de testing van de contracts naar de onderliggende Blockchain.
         
 # SemanticUI
   De front-end App die met SemanticUI is ontwikkeld (de Webdev server) communiceerd met het on-chain contract op De Blockchain.           Dit loopt via de browser van de eindgebruiker. Dit gebeurd door middel van een tussenpersoon, namelijk de javaScript Library WEB3.
