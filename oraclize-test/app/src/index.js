@@ -7,7 +7,9 @@ let OraclizeContract = contract(cropSureArtifact);
 const app = {
   web3: null,
   account: null,
+  accounts: null,
   meta: null,
+  instance: null,
 
   start: async function() {
     const { web3 } = this;
@@ -26,6 +28,7 @@ const app = {
       // get accounts
       const accounts = await web3.eth.getAccounts();
       this.account = accounts[0];
+      this.accounts = accounts;
 
       // deploy contract
       OraclizeContract.deployed().then((instance) => {
@@ -37,6 +40,8 @@ const app = {
   },
 
   addEventListeners: function(instance){
+    this.instance = instance;
+
     instance.ConsoleLog({}, (err, result) => {
       if(!err){
         console.log(result.args)
@@ -60,49 +65,24 @@ const app = {
         console.log("payment failed.");
       }
     });
-
-    // this.meta.events.ConsoleLog({}, (err, result) => {
-    //   if(!err){
-    //     console.log(result.args)
-    //   }else{
-    //     console.error(err)
-    //   }
-    // });
-    // this.meta.events.PaymentSucceeded({}, (err, result) => {
-    //   if (!err) {
-    //     console.log("payment succeeded.");
-    //   }
-    // });
-    // this.meta.events.allEvents({}, (err, result) => {
-    //   console.log("did we just receive an event????????");
-    //   if(!err){
-    //     console.log(result);
-    //     console.log(result.args)
-    //   }else{
-    //     console.error(err)
-    //   }
-    // });
-
-    instance.test({ from: this.account });
   },
 
-  fireTestEvent: async function() {
-    this.meta.methods.test();
-  },
-
-  sendCoin: async function() {
-    const amount = parseInt(document.getElementById("amount").value);
+  executePayment: async function() {
+    const toamount = parseInt(document.getElementById("amount").value);
+    const from = document.getElementById("from").value;
     const receiver = document.getElementById("to").value;
+    const condition = parseInt(document.getElementById("condition").value);
 
-    // const { sendCoin } = this.meta.methods;
-    // await sendCoin(receiver, amount).send({ from: this.account });
+    console.log(this.instance);
+
+    return await this.meta.methods.executePayment(1, 70).send({ from: this.accounts[0], to: this.accounts[1] });
   },
 };
 
 window.app = app;
 
 window.addEventListener("load", () => {
-  app.web3 = new Web3( 
+  app.web3 = new Web3(
     new Web3.providers.WebsocketProvider("ws://116.203.139.111:9545"),
   );
 

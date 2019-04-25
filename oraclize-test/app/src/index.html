@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Crop sure Verzekering</title>
+    <title>ASR Verzekeringen</title>
     <link rel="stylesheet" href="semantic.css">
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="semantic.js"></script>
@@ -16,7 +16,7 @@
       <div class="ui container">
         <a href="#" class="header item">
           <!-- <img class="logo" src="assets/images/logo.png"> -->
-          Crop sure Verzekering
+          ASR Verzekeringen
         </a>
         <!-- <a href="#" class="item">Home</a>
         <div class="ui simple dropdown item">
@@ -51,7 +51,7 @@
               <input type="text" id="from" name="eth[from]" placeholder="0x0">
             </div>
             <div class="field">
-              <label>Naar</label>
+              <label>Verzekerde boer</label>
               <input type="text" id= "to" name="eth[to]" placeholder="0x0">
             </div>
           </div>
@@ -59,16 +59,16 @@
         <div class="field">
           <div class="two fields">
             <div class="field">
-              <label>Bedrag</label>
+              <label>Schadeuitbetaling in ETH</label>
               <input type="text" id="amount" name="eth[amount]" placeholder="0.0">
             </div>
             <div class="field">
-              <label>Uitkeren bij</label>
+              <label>Uitkeren bij neerslag in mm</label>
               <input type="text" id="condition" name="eth[condition]" placeholder="75">
             </div>
           </div>
         </div>
-        <div class="ui teal button" tabindex="0" onclick="app.sendCoin()">Betaal Ethereum</div>
+        <div class="ui teal button" tabindex="0" onclick="app.executePayment()">Betaal Ethereum</div>
       </form>
     </div>
     <script src="index.js"></script>
