@@ -29,6 +29,12 @@ Randvoorwaarden om het PoC op een local machine te runnen, open 3 terminals:
   De front-end App die met SemanticUI is ontwikkeld (de Webdev server) communiceerd met het on-chain contract op De Blockchain.           Dit loopt via de browser van de eindgebruiker. Dit gebeurd door middel van een tussenpersoon, namelijk de javaScript Library WEB3.
         
   Met Web3 luister je ook naar de events, die je van je Smart Contract terug krijgt.
+  
+    event ConsoleLog(string data);
+    event PaymentSucceeded();
+    event PaymentFailed();
+    event PaymentFailedNotEnoughEth();
+
         
   Er bestaat namelijk een functie genaamd *executePayment* in het Smart Contract
   
