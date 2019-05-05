@@ -45,7 +45,7 @@ contract CropSure is usingOraclize {
 	// if (oraclize_getPrice("URL") > address(this).balance) {
 	//	emit PaymentFailedNotEnoughEth();
 	//} else {
-		oraclize_query("URL", "json(http://weerlive.nl/api/json-data-10min.php?key=demo&locatie=Amsterdam).liveweer.0.d0neerslag");
+		oraclize_query("URL", "json(http://weerlive.nl/api/json-data-10min.php?key=23576abdeb&locatie=Amsterdam).liveweer.0.d0neerslag");
 	//}
 
         return 1;
